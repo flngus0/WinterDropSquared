@@ -1,6 +1,6 @@
 # Winter Drop Squared
 
-in the snapped shot. straight up "freezing it". and by it, haha, well. let's justr say. My icickle
+in the snapped shot. straight up "freezing it". and by "it", haha, well. let's justr say. My icickle
 
 ## Setup
 
