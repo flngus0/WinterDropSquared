@@ -3,7 +3,7 @@
 	"package": "snapshotcycle.wintersquared.mixin",
 	"compatibilityLevel": "JAVA_25",
 	"mixins": [
-		"ExampleMixin"
+		"BreakEncasedIceMixin"
 	],
 	"injectors": {
 		"defaultRequire": 1
