@@ -3,6 +3,7 @@ package snapshotcycle.wintersquared;
 import net.fabricmc.api.ModInitializer;
 
 import net.fabricmc.fabric.api.entity.event.v1.ServerLivingEntityEvents;
+import net.fabricmc.fabric.api.object.builder.v1.entity.FabricDefaultAttributeRegistry;
 import net.minecraft.core.BlockPos;
 import net.minecraft.nbt.CompoundTag;
 import net.minecraft.resources.Identifier;
@@ -19,6 +20,7 @@ import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import snapshotcycle.wintersquared.block.EncasedIceBlock;
 import snapshotcycle.wintersquared.block.entity.EncasedIceBlockEntity;
+import snapshotcycle.wintersquared.entity.ShiverEntity;
 import snapshotcycle.wintersquared.init.ModBlockEntities;
 import snapshotcycle.wintersquared.init.ModBlocks;
 import snapshotcycle.wintersquared.init.ModEntities;
@@ -42,6 +44,7 @@ public class WinterDropSquared implements ModInitializer {
 			encaseEntity(le, (ServerLevel) le.level());
 		});
 
+		FabricDefaultAttributeRegistry.register(ModEntities.SHIVER, ShiverEntity.createAttributes());
 	}
 
 	public static void encaseEntity(Entity entity, ServerLevel level) {

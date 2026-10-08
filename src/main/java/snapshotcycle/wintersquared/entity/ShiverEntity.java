@@ -48,7 +48,7 @@ public class ShiverEntity extends Monster {
     private int maxSwell = 30;
     private int explosionRadius = 3;
     private boolean droppedSkulls;
-    private int icicleBreakRange = 12;
+    private int icicleBreakRange = 8;
 
     public ShiverEntity(EntityType<? extends ShiverEntity> type, Level level) {
         super(type, level);
