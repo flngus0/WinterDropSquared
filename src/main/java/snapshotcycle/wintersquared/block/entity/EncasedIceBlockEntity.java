@@ -21,6 +21,7 @@ import java.util.UUID;
 
 public class EncasedIceBlockEntity extends BlockEntity {
 
+    public boolean isParent = false;
     public TypedEntityData<EntityType<?>> entityData = TypedEntityData.of(EntityTypes.CHICKEN, new CompoundTag());
 
     public EncasedIceBlockEntity(BlockPos worldPosition, BlockState blockState) {
@@ -33,6 +34,7 @@ public class EncasedIceBlockEntity extends BlockEntity {
     @Override
     protected void saveAdditional(ValueOutput output) {
         super.saveAdditional(output);
+        output.putBoolean("isParent", isParent);
         output.store("entityData", TypedEntityData.codec(EntityType.CODEC), entityData);
     }
 
@@ -48,6 +50,7 @@ public class EncasedIceBlockEntity extends BlockEntity {
     @Override
     protected void loadAdditional(ValueInput input) {
         super.loadAdditional(input);
+        isParent = input.getBooleanOr("isParent", false);
         Optional<TypedEntityData<EntityType<?>>> optional = input.read("entityData", TypedEntityData.codec(EntityType.CODEC));
         if (optional.isPresent())
             entityData = optional.get();

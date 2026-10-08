@@ -20,6 +20,9 @@
 		],
 		"fabric-datagen": [
 			"snapshotcycle.wintersquared.WinterDropSquaredDataGenerator"
+		],
+		"client": [
+			"snapshotcycle.wintersquared.client.WinterDropSquaredClient"
 		]
 	},
 	"mixins": [

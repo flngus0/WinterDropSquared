@@ -59,6 +59,7 @@ public class WinterDropSquared implements ModInitializer {
 				}
 			}
 		}
+		((EncasedIceBlockEntity) level.getBlockEntity(pos)).isParent = true;
 	}
 
 	public static Identifier id(String path) {

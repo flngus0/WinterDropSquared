@@ -114,11 +114,16 @@ public class EncasedIceBlock extends BaseEntityBlock {
                 EntityType<?> type = typedData.get().type();
                 for (int x = 0; x < getBlockWidth(type); x++) {
                     for (int y = 0; y < getBlockHeight(type); y++) {
-                        level.setBlock(pos.relative(state.getValue(FACING), x).above(y), state, 3);
-                        state.updateNeighbourShapes(level, pos, 3);
+                        for (int z = 0; z < getBlockWidth(type); z++) {
+                            BlockPos newPos = pos.relative(state.getValue(FACING), x).relative(state.getValue(FACING).getClockWise(), z).above(y);
+                            level.setBlock(newPos, state, 3);
+                            ((EncasedIceBlockEntity) level.getBlockEntity(newPos)).setEntityData(((EncasedIceBlockEntity) level.getBlockEntity(pos)).entityData);
+                            state.updateNeighbourShapes(level, pos, 3);
+                        }
                     }
                 }
             }
+            ((EncasedIceBlockEntity) level.getBlockEntity(pos)).isParent = true;
         }
     }
 }
