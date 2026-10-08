@@ -1,0 +1,6 @@
+{
+  "parent": "minecraft:item/handheld",
+  "textures": {
+    "layer0": "winter-squared:item/shiver_spawn_egg"
+  }
+}

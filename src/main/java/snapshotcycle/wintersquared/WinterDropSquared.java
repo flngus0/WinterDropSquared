@@ -21,6 +21,8 @@ import snapshotcycle.wintersquared.block.EncasedIceBlock;
 import snapshotcycle.wintersquared.block.entity.EncasedIceBlockEntity;
 import snapshotcycle.wintersquared.init.ModBlockEntities;
 import snapshotcycle.wintersquared.init.ModBlocks;
+import snapshotcycle.wintersquared.init.ModEntities;
+import snapshotcycle.wintersquared.init.ModItems;
 
 public class WinterDropSquared implements ModInitializer {
 	public static final String MOD_ID = "winter-squared";
@@ -33,6 +35,8 @@ public class WinterDropSquared implements ModInitializer {
 
 		ModBlocks.init();
 		ModBlockEntities.init();
+		ModEntities.init();
+		ModItems.init();
 
 		ServerLivingEntityEvents.AFTER_DEATH.register((le,damageSource)->{
 			encaseEntity(le, (ServerLevel) le.level());

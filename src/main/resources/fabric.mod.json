@@ -3,9 +3,11 @@
 	"id": "winter-squared",
 	"version": "${version}",
 	"name": "Winter Drop Squared",
-	"description": "This is an example description! Tell everyone what your mod is about!",
+	"description": "Adds additional features to the Winter Drop",
 	"authors": [
-		"Me!"
+		"Agmas",
+		"Brandrobkus",
+		"And Viewers Like You. Thank You!"
 	],
 	"contact": {
 		"homepage": "https://fabricmc.net/",
