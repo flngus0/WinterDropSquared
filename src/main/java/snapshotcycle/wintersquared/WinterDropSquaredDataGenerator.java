@@ -3,6 +3,7 @@ package snapshotcycle.wintersquared;
 import net.fabricmc.fabric.api.datagen.v1.DataGeneratorEntrypoint;
 import net.fabricmc.fabric.api.datagen.v1.FabricDataGenerator;
 import snapshotcycle.wintersquared.datagen.ModModelProvider;
+import snapshotcycle.wintersquared.datagen.ModSoundsProvider;
 
 public class WinterDropSquaredDataGenerator implements DataGeneratorEntrypoint {
 	@Override
@@ -10,5 +11,6 @@ public class WinterDropSquaredDataGenerator implements DataGeneratorEntrypoint {
 		var pack = fabricDataGenerator.createPack();
 
 		pack.addProvider(ModModelProvider::new);
+		pack.addProvider(ModSoundsProvider::new);
 	}
 }

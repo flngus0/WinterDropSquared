@@ -21,10 +21,7 @@ import org.slf4j.LoggerFactory;
 import snapshotcycle.wintersquared.block.EncasedIceBlock;
 import snapshotcycle.wintersquared.block.entity.EncasedIceBlockEntity;
 import snapshotcycle.wintersquared.entity.ShiverEntity;
-import snapshotcycle.wintersquared.init.ModBlockEntities;
-import snapshotcycle.wintersquared.init.ModBlocks;
-import snapshotcycle.wintersquared.init.ModEntities;
-import snapshotcycle.wintersquared.init.ModItems;
+import snapshotcycle.wintersquared.init.*;
 
 public class WinterDropSquared implements ModInitializer {
 	public static final String MOD_ID = "winter-squared";
@@ -39,6 +36,7 @@ public class WinterDropSquared implements ModInitializer {
 		ModBlockEntities.init();
 		ModEntities.init();
 		ModItems.init();
+		ModSounds.init();
 
 		ServerLivingEntityEvents.AFTER_DEATH.register((le,damageSource)->{
 			encaseEntity(le, (ServerLevel) le.level());

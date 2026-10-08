@@ -1,0 +1,17 @@
+{
+  "shiver_death": {
+    "sounds": [
+      "winter-squared:mob/shiver/death"
+    ],
+    "subtitle": "sounds.winter-squared.shiver_death"
+  },
+  "shiver_hurt": {
+    "sounds": [
+      "winter-squared:mob/shiver/say1",
+      "winter-squared:mob/shiver/say2",
+      "winter-squared:mob/shiver/say3",
+      "winter-squared:mob/shiver/say4"
+    ],
+    "subtitle": "sounds.winter-squared.shiver_hurt"
+  }
+}

@@ -23,7 +23,6 @@ import net.minecraft.world.entity.animal.feline.Cat;
 import net.minecraft.world.entity.animal.feline.Ocelot;
 import net.minecraft.world.entity.animal.goat.Goat;
 import net.minecraft.world.entity.item.FallingBlockEntity;
-import net.minecraft.world.entity.monster.Creeper;
 import net.minecraft.world.entity.monster.Monster;
 import net.minecraft.world.entity.player.Player;
 import net.minecraft.world.item.ItemStack;
@@ -36,6 +35,7 @@ import net.minecraft.world.level.storage.ValueInput;
 import net.minecraft.world.level.storage.ValueOutput;
 import net.minecraft.world.level.storage.loot.BuiltInLootTables;
 import org.jspecify.annotations.Nullable;
+import snapshotcycle.wintersquared.init.ModSounds;
 
 import java.util.Collection;
 
@@ -154,12 +154,12 @@ public class ShiverEntity extends Monster {
 
     @Override
     protected SoundEvent getHurtSound(final DamageSource source) {
-        return SoundEvents.CREEPER_HURT;
+        return ModSounds.SHIVER_HURT;
     }
 
     @Override
     protected SoundEvent getDeathSound() {
-        return SoundEvents.CREEPER_DEATH;
+        return ModSounds.SHIVER_DEATH;
     }
 
     @Override
